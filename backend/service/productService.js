@@ -125,7 +125,7 @@ module.exports = exports = (app, pool) => {
         const { NameProduct, Price, Stock, Image, IdVariant, CreateBy } = req.body
 
         const query = `INSERT INTO public."TblProduct"(
-            "NameProduct", "Price", "Stock", "Image", "IdVariant", "CreateBy", "CreateDate", "IsDelete")
+            "NameProduct", "Price", "Stock", "Image", "idVariant", "CreateBy", "CreateDate", "IsDelete")
             VALUES ('${NameProduct}', ${Price}, ${Stock}, '${Image}', ${IdVariant}, ${CreateBy}, now(), false)`
 
         console.log(query)
@@ -154,7 +154,7 @@ module.exports = exports = (app, pool) => {
         "Price"=${Price}, 
         "Stock"=${Stock},
         "Image"='${Image}', 
-        "IdVariant"= ${IdVariant}, 
+        "idVariant"= ${IdVariant}, 
         "UpdateBy"='${UpdateBy}', 
         "UpdateDate"= now()
         WHERE "Id" = ${id};`
@@ -240,7 +240,7 @@ module.exports = exports = (app, pool) => {
         "TblVariant"."NameVariant" as "NameVariant",
         "TblVariant"."Description" as "DescriptionVariant"
         FROM "TblProduct" as p
-        JOIN "TblVariant" ON (p."IdVariant" = "TblVariant".id)
+        JOIN "TblVariant" ON (p."idVariant" = "TblVariant".id)
         WHERE p."IsDelete" = false;`
 
         pool.query(query, (error, result) => {
@@ -273,7 +273,7 @@ module.exports = exports = (app, pool) => {
         "TblCategory"."NameCategory" as "NameCategory",
 		"TblCategory"."Description" as "DescriptionCategory"
         FROM "TblProduct" as p
-        JOIN "TblVariant" ON (p."IdVariant" = "TblVariant".id)
+        JOIN "TblVariant" ON (p."idVariant" = "TblVariant".id)
 		JOIN "TblCategory" ON ("TblVariant"."idCategory" = "TblCategory".id)
         WHERE p."IsDelete" = false AND p."Id" = ${id};`
 

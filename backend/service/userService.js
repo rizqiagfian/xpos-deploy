@@ -13,7 +13,7 @@ module.exports = exports = (app, pool) => {
             ),
 
             "InsertCustomer" AS (
-            INSERT INTO "TblCustomer" ("IdUser", "NameCutomer", "NoHp", "Gender", "Address",
+            INSERT INTO "TblCustomer" ("IdUser", "NameCustomer", "NoHp", "Gender", "Address",
                                       "IsDelete", "CreateBy", "CreateDate")
             VALUES ((select "IdUser" from "InsertUser"),'${customer.NameCustomer}', 
                     '${customer.NoHp}', '${customer.Gender}', '${customer.Address}', false, '1', now())
@@ -40,7 +40,7 @@ module.exports = exports = (app, pool) => {
 
         const query = `SELECT c."IdCutomer" as "IdCustomer",
         c."IdUser" as "IdUser",
-        c."NameCutomer" as "NameCustomer",
+        c."NameCustomer" as "NameCustomer",
         c."NoHp" as "NoHp",
         c."Gender" as "Gender",
         c."Address" as "Address",

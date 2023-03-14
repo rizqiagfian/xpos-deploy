@@ -40,14 +40,14 @@ module.exports = exports = (app, pool) => {
         p."Price" as "Price",
         p."Stock" as "Stock",
         p."Image" as "Image",
-        "TblVariant"."id" as "IdVariant",
+        "TblVariant"."id" as "idVariant",
         "TblVariant"."NameVariant" as "NameVariant",
         "TblVariant"."Description" as "DescriptionVariant",
 		"TblCategory"."id" as "IdCategory",
         "TblCategory"."NameCategory" as "NameCategory",
 		"TblCategory"."Description" as "DescriptionCategory"
         FROM "TblProduct" as p
-        JOIN "TblVariant" ON (p."IdVariant" = "TblVariant".id)
+        JOIN "TblVariant" ON (p."idVariant" = "TblVariant".id)
 		JOIN "TblCategory" ON ("TblVariant"."idCategory" = "TblCategory".id)
         WHERE p."IsDelete" = false ${qFilter} 
         ORDER BY "${sortField}" ${sortOrder === 1 ? "ASC" : "DESC"} 

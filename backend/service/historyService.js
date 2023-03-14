@@ -61,7 +61,7 @@ module.exports = exports = (app, pool) => {
         FROM "TblOrderDetail" as d
         JOIN "TblOrderHeader" ON (d."IdOrderHeader" = "TblOrderHeader"."IdOrderHeader")
         JOIN "TblProduct" ON (d."IdProduct" = "TblProduct"."Id")
-        JOIN "TblVariant" ON ("TblProduct"."IdVariant" = "TblVariant"."id")
+        JOIN "TblVariant" ON ("TblProduct"."idVariant" = "TblVariant"."id")
         JOIN "TblCategory" ON ("TblCategory"."id" = "TblVariant"."idCategory")
         WHERE "TblOrderHeader"."IdOrderHeader" = ${id}
         AND d."IsDelete" = false;`
