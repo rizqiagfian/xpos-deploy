@@ -1,0 +1,12 @@
+/node_modules
+
+/build
+
+/idea
+/.idea
+
+.git
+
+*.md
+
+.gitignore
