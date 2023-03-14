@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const PORT = 8088
+const PORT = process.env.PORT || 8088
 const bodyParser = require("body-parser")
 global.config = require('./configure/config')
 const cors = require("cors")
