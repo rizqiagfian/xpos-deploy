@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* JOB LIST */
+/* .datatable-responsive-demo .p-datatable-responsive-demo .p-datatable-tbody > tr > td .p-column-title {
+    display: none;
+} */
+
+@media screen and (max-width: 40em) {
+    .datatable-responsive-demo .p-datatable.p-datatable-responsive-demo .p-datatable-thead > tr > th,
+    .datatable-responsive-demo .p-datatable.p-datatable-responsive-demo .p-datatable-tfoot > tr > td {
+        display: none !important;
+    }
+
+    .datatable-responsive-demo .p-datatable.p-datatable-responsive-demo .p-datatable-tbody > tr > td {
+        text-align: left;
+        display: block;
+        width: 100%;
+        float: left;
+        clear: left;
+        border: 0 none;
+    }
+
+    .datatable-responsive-demo .p-datatable.p-datatable-responsive-demo .p-datatable-tbody > tr > td .p-column-title {
+        padding: .4rem;
+        min-width: 30%;
+        display: inline-block;
+        margin: -.4em 1em -.4em -.4rem;
+        font-weight: bold;
+    }
+
+    .datatable-responsive-demo .p-datatable.p-datatable-responsive-demo .p-datatable-tbody > tr > td:last-child {
+        border-bottom: 1px solid var(--surface-d);
+    }
+}
+
+.p-datatable .p-column-header-content {
+    display: block;
+}
+
+.form-add-category > .p-dialog-header {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #007bff;
+}
+
+.form-add-category > .p-dialog-content {
+    padding: 1rem;
+}
+
+.form-add-category > .p-dialog-header > .p-dialog-header-icons > .p-dialog-header-icon {
+    color: #fff;
+}
+
+.dialog-response > .p-dialog-header {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #607d8b;
+}
+
+.dialog-response > .p-dialog-content {
+    padding: 1rem;
+}
+
+.dialog-response > .p-dialog-header > .p-dialog-header-icons > .p-dialog-header-icon {
+    color: #fff;
+}
+
+.dialog-response-fail > .p-dialog-header {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #D01224;
+}
+
+.dialog-response-fail > .p-dialog-content {
+    padding: 1rem;
+}
+
+.dialog-response-fail > .p-dialog-header > .p-dialog-header-icons > .p-dialog-header-icon {
+    color: #fff;
+}
+
+.p-dropdown .p-dropdown-label {
+    padding: 6px;
+}

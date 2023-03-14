@@ -5,14 +5,9 @@ const bodyParser = require("body-parser")
 global.config = require('./configure/config')
 const cors = require("cors")
 
-// const corsOptions = {
-//     origin: ["http://localhost:8081", '*']
-// }
-
 const corsOptions = {
-    origin: ["http://localhost:8081", "http://localhost:3111", "*"]
+    origin: ["http://localhost:8081", '*']
 }
-
 
 app.use(cors(corsOptions))
 app.use(express.static('upload'))

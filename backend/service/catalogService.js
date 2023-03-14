@@ -47,7 +47,7 @@ module.exports = exports = (app, pool) => {
         "TblCategory"."NameCategory" as "NameCategory",
 		"TblCategory"."Description" as "DescriptionCategory"
         FROM "TblProduct" as p
-        JOIN "TblVariant" ON (p."idVariant" = "TblVariant".id)
+        JOIN "TblVariant" ON (p."IdVariant" = "TblVariant".id)
 		JOIN "TblCategory" ON ("TblVariant"."idCategory" = "TblCategory".id)
         WHERE p."IsDelete" = false ${qFilter} 
         ORDER BY "${sortField}" ${sortOrder === 1 ? "ASC" : "DESC"} 
