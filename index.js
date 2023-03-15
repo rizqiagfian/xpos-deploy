@@ -6,7 +6,7 @@ global.config = require('./configure/config')
 const cors = require("cors")
 
 const corsOptions = {
-    origin: ["http://localhost:8081", '*']
+    origin: ["http://localhost:8081", "https://xpos-rizqi-agfian.netlify.app", '*']
 }
 
 app.use(cors(corsOptions))
